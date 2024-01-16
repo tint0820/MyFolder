@@ -14,8 +14,8 @@ train_test_split <-  function(data, size=0.8){
   set.seed(42)
   n <- nrow(data)
   train_id <- sample(1:n, size*n)
-  train_df <- data[train_id, ] #make data frame form train_id
-  test_df <- data[-train_id, ] #ไม่เอา train_id ที่ใช้ไปแล้ว
+  train_df <- data[train_id, ] 
+  test_df <- data[-train_id, ] 
   return(list(train_df,train_df))
 }
 
