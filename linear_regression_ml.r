@@ -3,12 +3,6 @@ library(caret)
 # preview data
 head(mtcars)
 
-
-# build standard interface for model training 
-model_2 <- train(mpg ~ hp + wt,
-                 data = mtcars,
-                 method = "lm") #just change method
-
 ## 1.split data
 train_test_split <-  function(data, size=0.8){
   set.seed(42)
